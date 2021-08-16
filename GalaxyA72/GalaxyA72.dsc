@@ -172,7 +172,6 @@
   #
   # GPIO
   #
-  ArmPlatformPkg/Drivers/PL061GpioDxe/PL061GpioDxe.inf
 
   #
   # Virtual Keyboard
