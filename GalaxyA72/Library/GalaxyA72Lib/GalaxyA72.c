@@ -19,7 +19,7 @@
 
 #include <Ppi/ArmMpCoreInfo.h>
 
-ARM_CORE_INFO mHiKey960InfoTable[] = {
+ARM_CORE_INFO mGalaxyA72InfoTable[] = {
   {
     // Cluster 0, Core 0
     0x0, 0x0,
@@ -27,7 +27,7 @@ ARM_CORE_INFO mHiKey960InfoTable[] = {
     // MP Core MailBox Set/Get/Clear Addresses and Clear Value
     (UINT64)0xFFFFFFFF
   },
-  {
+  /*{
     // Cluster 0, Core 1
     0x0, 0x1,
 
@@ -75,7 +75,7 @@ ARM_CORE_INFO mHiKey960InfoTable[] = {
 
     // MP Core MailBox Set/Get/Clear Addresses and Clear Value
     (UINT64)0xFFFFFFFF
-  }
+  }*/
 };
 
 /**
@@ -116,8 +116,8 @@ PrePeiCoreGetMpCoreInfo (
   )
 {
   // Only support one cluster
-  *CoreCount    = sizeof(mHiKey960InfoTable) / sizeof(ARM_CORE_INFO);
-  *ArmCoreTable = mHiKey960InfoTable;
+  *CoreCount    = sizeof(mGalaxyA72InfoTable) / sizeof(ARM_CORE_INFO);
+  *ArmCoreTable = mGalaxyA72InfoTable;
   return EFI_SUCCESS;
 }
 
