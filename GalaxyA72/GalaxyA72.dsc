@@ -31,7 +31,7 @@
 [LibraryClasses.common]
   ArmLib|ArmPkg/Library/ArmLib/ArmBaseLib.inf
   ArmPlatformLib|GalaxyA72/Library/GalaxyA72Lib/GalaxyA72Lib.inf
-
+  CompilerIntrinsicsLib|ArmPkg/Library/CompilerIntrinsicsLib/CompilerIntrinsicsLib.inf
   CapsuleLib|MdeModulePkg/Library/DxeCapsuleLibNull/DxeCapsuleLibNull.inf
   UefiBootManagerLib|MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib.inf
   PlatformBootManagerLib|ArmPkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
@@ -77,7 +77,7 @@
 [PcdsFeatureFlag.common]
   ## If TRUE, Graphics Output Protocol will be installed on virtual handle created by ConsplitterDxe.
   #  It could be set FALSE to save size.
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutGopSupport|FALSE
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutGopSupport|TRUE
 
 [PcdsFixedAtBuild.common]
   gEfiMdePkgTokenSpaceGuid.PcdDefaultTerminalType|4
@@ -122,6 +122,10 @@
   # Make VariableRuntimeDxe work at emulated non-volatile variable mode.
   #
   gEfiMdeModulePkgTokenSpaceGuid.PcdEmuVariableNvModeEnable|TRUE
+
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferAddress|0x9c000000
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferWidth|1080
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferHeight|2400
 
 ################################################################################
 #
@@ -179,6 +183,7 @@
   EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
 
   GalaxyA72/GalaxyA72Dxe/GalaxyA72Dxe.inf
+  GalaxyA72/SimpleFbDxe/SimpleFbDxe.inf
 
   #
   # USB Host Support

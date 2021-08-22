@@ -21,3 +21,7 @@ Flash
 ```
 heimdall flash --BOOT boot-a72q.img
 ```
+
+# Credits
+
+SimpleFbDxe screen driver is from imbushuo's [Lumia950XLPkg](https://github.com/WOA-Project/Lumia950XLPkg).

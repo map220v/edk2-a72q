@@ -40,12 +40,6 @@ InitPeripherals (
   IN VOID
   )
 {
-  // set the screen
-	for (UINT64 addr = 0x9c000000ull; addr < 0x9c000000ull + (1080 * 2400 * 4); addr += 4) {
-		MmioWrite32(addr, 0x00ff80);
-	}
-	// spin forever
-	while (1) {}
 }
 
 /**
