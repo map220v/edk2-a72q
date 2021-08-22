@@ -18,15 +18,31 @@
 .align 3
 
 ASM_FUNC(ArmPlatformPeiBootAction)
-// blank half of the screen, freeze forever
-	mov	x0, 0x9c000000        //display mem start
-	movk	x1, 0x9c48, lsl 16  //end adress: 0x9c480000
-.L2:
-	str	wzr, [x0], 4
-	cmp	x0, x1
-	bne	.L2
-	b .
+startlabel:
+  // check if we're located at expected location
+  adr	x4, .
+  ldr	x5, =ArmPlatformPeiBootAction
+  cmp	x4, x5
+  bne	docopy
   ret
+docopy:
+  // find our start address by getting our expected offset, then subtracting it from our actual address
+  ldr	x6, =FixedPcdGet64 (PcdFdBaseAddress)
+  sub	x5, x5, x6 // x5 now holds offset of ArmPlatformPeiBootAction from start of FD base
+  sub	x4, x4, x5 // x4 now holds address of actual FD base
+  // tweak the return address
+  // note: x30 is lr; gcc5 doesn't have the alias
+  sub	x30, x30, x4
+  add	x30, x30, x6
+  ldr	x5, =FixedPcdGet64 (PcdFdSize)
+  // crap memcpy
+loop:
+  ldp	x2, x3, [x4], #16
+  stp	x2, x3, [x6], #16
+  subs	x5, x5, #16
+  b.ne	loop
+  ret
+.ltorg
 
 //UINTN
 //ArmPlatformIsPrimaryCore (

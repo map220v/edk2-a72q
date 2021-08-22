@@ -25,7 +25,7 @@
 ################################################################################
 
 [FD.GALAXYA72_UEFI]
-BaseAddress   = 0x80080000|gArmTokenSpaceGuid.PcdFdBaseAddress  # The base address of the Firmware in NOR Flash.
+BaseAddress   = 0xA1200000|gArmTokenSpaceGuid.PcdFdBaseAddress  # The base address of the Firmware in NOR Flash.
 Size          = 0x00200000|gArmTokenSpaceGuid.PcdFdSize         # The size in bytes of the FLASH Device
 ErasePolarity = 1
 
@@ -145,6 +145,7 @@ READ_LOCK_STATUS   = TRUE
   #
   INF EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
 
+  INF GalaxyA72/GalaxyA72Dxe/GalaxyA72Dxe.inf
 
   #
   # USB Host Support
