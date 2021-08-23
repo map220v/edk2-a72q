@@ -8,4 +8,3 @@ gzip -c < workspace/Build/GalaxyA72/DEBUG_GCC5/FV/GALAXYA72_UEFI.fd >uefi.img
 cat a72q.dtb >>uefi.img
 echo > ramdisk
 abootimg --create boot-a72q.img -k uefi.img -r ramdisk
-heimdall.exe flash --BOOT boot-a72q.img
