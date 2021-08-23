@@ -33,10 +33,37 @@ STATIC struct GalaxyA72ReservedMemory {
   EFI_PHYSICAL_ADDRESS         Offset;
   EFI_PHYSICAL_ADDRESS         Size;
 } GalaxyA72ReservedMemoryBuffer [] = {
+  { 0xb0400000, 0x01800000 },    // uh_heap_region
   { 0x80000000, 0x00600000 },    // hyp_region
   { 0x80700000, 0x00140000 },    // xbl_aop_mem
+  { 0x808ff000, 0x00001000 },    // sec_apps_region
+  { 0x80900000, 0x00200000 },    // smem
   { 0x80b00000, 0x07100000 },    // removed_region
+  { 0x8b000000, 0x08900000 },    // modem_region
+  { 0x97a00000, 0x00500000 },    // camera_region
+  { 0x97f00000, 0x00500000 },    // pil_npu_region
+  { 0x98400000, 0x00500000 },    // pil_video_region
+  { 0x98900000, 0x01e00000 },    // cdsp_regions
+  { 0x93c00000, 0x03e00000 },    // pil_adsp_region
+  { 0x93900000, 0x00200000 },    // wlan_fw_region
+  { 0x93b00000, 0x00010000 },    // ipa_fw_region
+  { 0x93b10000, 0x00005000 },    // ipa_gsi_region
+  { 0x93b15000, 0x00002000 },    // gpu_region
   { 0x9e000000, 0x02000000 },    // qseecom_region
+  { 0x9f400000, 0x01e00000 },    // cdsp_sec_regions
+  { 0x9c000000, 0x01700000 },    // cont_splash_region(framebuffer)
+  { 0x9d700000, 0x00100000 },    // dfps_data_region
+  { 0x9c000000, 0x01700000 },    // disp_rdump_region(framebuffer)
+  { 0xb4400000, 0x00200000 },    // ss_plog
+  { 0xb4600000, 0x00100000 },    // ramoops
+  { 0xb4700000, 0x00800000 },    // sec_debug_region
+  { 0xb4f00000, 0x00001000 },    // sec_debug_autocomment
+  //{ 0x0000000180000000, 0x05900000 },    // sec_debug_rdx_bootdev
+  { 0xa0001000, 0x00001000 },    // kaslr_region
+  { 0xb0200000, 0x00200000 },    // rkp_region
+  { 0xa1000000, 0x00001000 },    // hdm_region
+  { 0xb5000000, 0x06000000 },    // modem_shared_mem_region
+  //{ 0x0000000120000000, 0x25800000 },    // camera_mem_region
 };
 
 /**
