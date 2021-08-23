@@ -10,7 +10,7 @@ Setup
 git clone https://github.com/map220v/edk2-a72q
 git clone https://github.com/tianocore/edk2.git --recursive
 git clone https://github.com/tianocore/edk2-platforms.git
-sudo apt install build-essential uuid-dev iasl git nasm python3-distutils gcc-aarch64-linux-gnu
+sudo apt install build-essential uuid-dev iasl git nasm python3-distutils gcc-aarch64-linux-gnu abootimg
 cd edk2-a72g
 ./firstrun.sh
 ```
