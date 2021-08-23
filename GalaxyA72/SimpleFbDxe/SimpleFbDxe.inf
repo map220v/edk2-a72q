@@ -28,6 +28,8 @@
   DebugLib
   CompilerIntrinsicsLib
   PcdLib
+  FrameBufferBltLib
+  CacheMaintenanceLib
 
 [Protocols]
   gEfiGraphicsOutputProtocolGuid ## PRODUCES

@@ -33,3 +33,6 @@
 
 [Packages]
   MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  CacheMaintenanceLib
