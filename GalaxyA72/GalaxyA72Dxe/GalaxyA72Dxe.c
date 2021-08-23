@@ -43,7 +43,6 @@ InitPeripherals (
   IN VOID
   )
 {
-  /*
   EFI_STATUS            Status;
   // https://lists.01.org/pipermail/edk2-devel/2017-August/013417.html
   Status = gCpu->SetMemoryAttributes (gCpu, 0xb4600000, 0x100000,
@@ -52,7 +51,6 @@ InitPeripherals (
   Status = gCpu->SetMemoryAttributes (gCpu, 0x9c000000, 0x1800000,
                   EFI_MEMORY_WC | EFI_MEMORY_XP);
   ASSERT_EFI_ERROR (Status);
-  */
 }
 
 /**
