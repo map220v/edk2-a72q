@@ -44,7 +44,7 @@
   BootLogoLib|MdeModulePkg/Library/BootLogoLib/BootLogoLib.inf
 
   SerialPortLib|GalaxyA72/Library/InMemorySerialPortLib/InMemorySerialPortLib.inf
-  RealTimeClockLib|ArmPlatformPkg/Library/PL031RealTimeClockLib/PL031RealTimeClockLib.inf
+  RealTimeClockLib|EmbeddedPkg/Library/VirtualRealTimeClockLib/VirtualRealTimeClockLib.inf
   TimeBaseLib|EmbeddedPkg/Library/TimeBaseLib/TimeBaseLib.inf
 
   # USB Requirements
@@ -109,8 +109,6 @@
   gArmTokenSpaceGuid.PcdArmArchTimerIntrNum|0x12
   gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|0x13
 
-  gEfiMdePkgTokenSpaceGuid.PcdPlatformBootTimeOut|10
-
   # GUID of the UI app
   gEfiMdeModulePkgTokenSpaceGuid.PcdBootManagerMenuFile|{ 0x21, 0xaa, 0x2c, 0x46, 0x14, 0x76, 0x03, 0x45, 0x83, 0x6e, 0x8a, 0xb6, 0xf4, 0x66, 0x23, 0x31 }
 
@@ -133,6 +131,8 @@
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferAddress|0x9c000000
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferWidth|1080
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferHeight|2400
+
+  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiExposedTableVersions|0x20
 
 ################################################################################
 #
@@ -228,6 +228,20 @@
   FatPkg/EnhancedFatDxe/Fat.inf
 
   #
+  # ACPI Support
+  #
+  MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
+  MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
+  MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
+  GalaxyA72/AcpiTables/AcpiTables.inf
+
+  #
+  # SMBIOS Support
+  #
+  GalaxyA72/Drivers/SmbiosPlatformDxe/SmbiosPlatformDxe.inf
+  MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
+
+  #
   # Bds
   #
   MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf
@@ -255,6 +269,7 @@
       NULL|ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.inf
       NULL|ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib.inf
       #NULL|ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib.inf
+      NULL|ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib.inf
       HandleParsingLib|ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib.inf
       PrintLib|MdePkg/Library/BasePrintLib/BasePrintLib.inf
       BcfgCommandLib|ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib.inf
