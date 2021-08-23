@@ -212,18 +212,21 @@ READ_LOCK_STATUS   = TRUE
   #
   # Bds
   #
+  INF MdeModulePkg/Universal/PrintDxe/PrintDxe.inf
   INF MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf
-  INF MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   INF MdeModulePkg/Universal/DisplayEngineDxe/DisplayEngineDxe.inf
+  INF MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
+  INF MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
   INF MdeModulePkg/Application/UiApp/UiApp.inf
+  INF GalaxyA72/Drivers/LogoDxe/LogoDxe.inf
 
   #
   # Binary DXE drivers from Galaxy A72
   #
 
   FILE DRIVER = 0d35cd8e-97ea-4f9a-96af-0f0d89f76567 {
-#    SECTION DXE_DEPEX = GalaxyA72/Binary/UFSDxe/UFSDxe.depex
+    SECTION DXE_DEPEX = GalaxyA72/Binary/UFSDxe/UFSDxe.depex
     SECTION PE32 = GalaxyA72/Binary/UFSDxe/UFSDxe.efi
     SECTION UI = "UFSDxe"
   }
