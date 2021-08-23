@@ -37,3 +37,5 @@
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferWidth|1080|UINT32|0x0000a401
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferHeight|1920|UINT32|0x0000a402
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32|UINT32|0x0000a403
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|1080|UINT32|0x0000a404
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|1920|UINT32|0x0000a405

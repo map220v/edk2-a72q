@@ -218,6 +218,28 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
   INF MdeModulePkg/Application/UiApp/UiApp.inf
 
+  #
+  # Binary DXE drivers from Galaxy A72
+  #
+
+  FILE DRIVER = 0d35cd8e-97ea-4f9a-96af-0f0d89f76567 {
+#    SECTION DXE_DEPEX = GalaxyA72/Binary/UFSDxe/UFSDxe.depex
+    SECTION PE32 = GalaxyA72/Binary/UFSDxe/UFSDxe.efi
+    SECTION UI = "UFSDxe"
+  }
+
+  FILE DRIVER = 2a7b4bef-80cd-49e1-b473-374ba4d673fc {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/SPMI/SPMI.depex
+    SECTION PE32 = GalaxyA72/Binary/SPMI/SPMI.efi
+    SECTION UI = "SPMI"
+  }
+
+  FILE DRIVER = 04de8591-d2b3-4077-bbbe-b12070094eb6 {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/I2C/I2C.depex
+    SECTION PE32 = GalaxyA72/Binary/I2C/I2C.efi
+    SECTION UI = "I2C"
+  }
+
 [FV.FVMAIN_COMPACT]
 FvAlignment        = 8
 ERASE_POLARITY     = 1

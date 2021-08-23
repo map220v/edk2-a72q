@@ -1,0 +1,30 @@
+[Defines]
+  INF_VERSION    = 0x00010005
+  BASE_NAME      = FrameBufferSerialPortLib
+  MODULE_TYPE    = BASE
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS  = SerialPortLib
+
+[Sources.common]
+  FrameBufferSerialPortLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  GalaxyA72/GalaxyA72.dec
+
+[LibraryClasses]
+  ArmLib
+  PcdLib
+  IoLib
+  HobLib
+  CompilerIntrinsicsLib
+  CacheMaintenanceLib
+
+[Pcd]
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferAddress
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferWidth
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferHeight
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferPixelBpp
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
+  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferVisibleHeight
