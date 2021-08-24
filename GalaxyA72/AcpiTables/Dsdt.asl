@@ -14,7 +14,7 @@
 
 #include "ArmPlatform.h"
 
-DefinitionBlock("DsdtTable.aml", "DSDT", 1, "ARMLTD", "ARM-JUNO", EFI_ACPI_ARM_OEM_REVISION) {
+DefinitionBlock("DsdtTable.aml", "DSDT", 1, "QCOMM", "SM7125", EFI_ACPI_ARM_OEM_REVISION) {
   Scope(_SB) {
     //
     // A57x2-A53x4 Processor declaration

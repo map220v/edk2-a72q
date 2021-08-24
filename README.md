@@ -2,6 +2,15 @@ EDK2 for Samsung Galaxy A72.
 
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
+## Working
+UFS Storage (using UFSDxe from edk2-sdm845-binary)
+
+## WARNING
+
+**DO NOT EVER TRY TO PORT IT TO *SONY* and *GOOGLE* DEVICES**
+
+**YOUR UFS WILL BE WIPED CLEAN!!!**
+
 ## Building
 Tested on Ubuntu 20.04 (WSL2)
 
@@ -26,3 +35,7 @@ heimdall flash --BOOT boot-a72q.img
 # Credits
 
 SimpleFbDxe screen driver is from imbushuo's [Lumia950XLPkg](https://github.com/WOA-Project/Lumia950XLPkg).
+
+`fxsheep` for his original `edk2-sagit`
+
+`strongtz` for maintaining Renegade Project
