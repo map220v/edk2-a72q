@@ -225,10 +225,11 @@ READ_LOCK_STATUS   = TRUE
   # Binary DXE drivers from Galaxy A72
   #
 
-  FILE DRIVER = 0d35cd8e-97ea-4f9a-96af-0f0d89f76567 {
-    #SECTION DXE_DEPEX = GalaxyA72/Binary/UFSDxe/UFSDxe.depex
-    SECTION PE32 = GalaxyA72/Binary/UFSDxe/UFSDxe.efi
-    SECTION UI = "UFSDxe"
+  # SmemDxe from SDM845. Original causes edk2 to crash.
+  FILE DRIVER = f541d663-4a48-40aa-aabf-ff158ccae34c {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/SmemDxe/SmemDxe.depex
+    SECTION PE32 = GalaxyA72/Binary/SmemDxe/SmemDxe.efi
+    SECTION UI = "SmemDxe"
   }
 
   FILE DRIVER = 2a7b4bef-80cd-49e1-b473-374ba4d673fc {
@@ -241,6 +242,12 @@ READ_LOCK_STATUS   = TRUE
     SECTION DXE_DEPEX = GalaxyA72/Binary/I2C/I2C.depex
     SECTION PE32 = GalaxyA72/Binary/I2C/I2C.efi
     SECTION UI = "I2C"
+  }
+  # UFSDxe from SDM845. Original UFSDxe doesn't load UFS for some reason.
+  FILE DRIVER = 0d35cd8e-97ea-4f9a-96af-0f0d89f76567 {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/UFSDxe/UFSDxe.depex
+    SECTION PE32 = GalaxyA72/Binary/UFSDxe/UFSDxe.efi
+    SECTION UI = "UFSDxe"
   }
 
 [FV.FVMAIN_COMPACT]
