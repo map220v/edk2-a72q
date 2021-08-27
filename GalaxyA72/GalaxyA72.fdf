@@ -257,7 +257,7 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "ChipInfo"
   }
 
-  # PlatformInfoDxeDriver from SDM845. Original was unstable like original SmemDxe
+  # PlatformInfoDxeDriver from SDM845. Original was unstable like SmemDxe
   FILE DRIVER = B105211B-BBBD-4ADD-A3B0-D1CF4A52154C {
     SECTION DXE_DEPEX = GalaxyA72/Binary/PlatformInfoDxeDriver/PlatformInfoDxeDriver.depex
     SECTION PE32 = GalaxyA72/Binary/PlatformInfoDxeDriver/PlatformInfoDxeDriver.efi
@@ -269,14 +269,14 @@ READ_LOCK_STATUS   = TRUE
     SECTION PE32 = GalaxyA72/Binary/HALIOMMU/HALIOMMU.efi
     SECTION UI = "HALIOMMU"
   }
-  # from SDM845. Original tried to write in secured zone and cause phone to reboot.
+  # from SDM845. Original causes hard reboot.
   # (Unstable)
   FILE DRIVER = ABA01FF8-2CCB-4E12-8B2E-CD3F4A742993 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/CmdDbDxe/CmdDbDxe.depex
     SECTION PE32 = GalaxyA72/Binary/CmdDbDxe/CmdDbDxe.efi
     SECTION UI = "CmdDbDxe"
   }
-  # from SDM845. Original tried to write in secured zone.
+  # from SDM845. Original causes hard reboot.
   FILE DRIVER = CB29F4D1-7F37-4692-A416-93E82E219766 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/RpmhDxe/RpmhDxe.depex
     SECTION PE32 = GalaxyA72/Binary/RpmhDxe/RpmhDxe.efi
@@ -355,7 +355,7 @@ READ_LOCK_STATUS   = TRUE
   }
 
   # SDM720G uses same clock as SDM855 according to Linux Kernel Sources
-  # ClockDxe from SDM720G and SDM855 causes phone to hard reboot (same as PlatformInfoDxeDriver and CmdDbDxe)
+  # ClockDxe from SDM720G and SDM855 causes phone to hard reboot (same as CmdDbDxe and RpmhDxe)
   #FILE DRIVER = 4db5dea6-5302-4d1a-8a82-677a683b0d29 {
   #  SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
   #  SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
