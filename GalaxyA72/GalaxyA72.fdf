@@ -354,6 +354,14 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "UFSDxe"
   }
 
+  # SDM720G uses same clock as SDM855 according to Linux Kernel Sources
+  # ClockDxe from SDM720G and SDM855 causes phone to hard reboot (same as PlatformInfoDxeDriver and CmdDbDxe)
+  #FILE DRIVER = 4db5dea6-5302-4d1a-8a82-677a683b0d29 {
+  #  SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
+  #  SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
+  #  SECTION UI = "ClockDxe"
+  #}
+
 [FV.FVMAIN_COMPACT]
 FvAlignment        = 8
 ERASE_POLARITY     = 1

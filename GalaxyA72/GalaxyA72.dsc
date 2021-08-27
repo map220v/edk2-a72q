@@ -93,9 +93,9 @@
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"Alpha"
 
-  # System Memory (4GB)
+  # System Memory (5GB)
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000
-  gArmTokenSpaceGuid.PcdSystemMemorySize|0xe0000000
+  gArmTokenSpaceGuid.PcdSystemMemorySize|0x140000000
 
   # We bring up eight cores here!
   gArmPlatformTokenSpaceGuid.PcdCoreCount|8
