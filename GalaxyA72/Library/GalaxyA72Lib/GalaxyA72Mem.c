@@ -17,7 +17,7 @@
 #include <Library/MemoryAllocationLib.h>
 #include <Library/DebugLib.h>
 #include <Library/HobLib.h>
-#include <Configuration/DeviceMemoryMap.h>
+ #include <Configuration/DeviceMemoryMap.h>
 /**
   Return the Virtual Memory Map of your platform
   This Virtual Memory Map is used by MemoryInitPei Module to initialize the MMU on your platform.

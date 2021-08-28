@@ -232,7 +232,6 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "SerialDxe"
   } 
 
-  # SmemDxe from SDM845. Original causes edk2 to crash.
   FILE DRIVER = f541d663-4a48-40aa-aabf-ff158ccae34c {
     SECTION DXE_DEPEX = GalaxyA72/Binary/SmemDxe/SmemDxe.depex
     SECTION PE32 = GalaxyA72/Binary/SmemDxe/SmemDxe.efi
@@ -257,7 +256,6 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "ChipInfo"
   }
 
-  # PlatformInfoDxeDriver from SDM845. Original was unstable like SmemDxe
   FILE DRIVER = B105211B-BBBD-4ADD-A3B0-D1CF4A52154C {
     SECTION DXE_DEPEX = GalaxyA72/Binary/PlatformInfoDxeDriver/PlatformInfoDxeDriver.depex
     SECTION PE32 = GalaxyA72/Binary/PlatformInfoDxeDriver/PlatformInfoDxeDriver.efi
@@ -269,14 +267,13 @@ READ_LOCK_STATUS   = TRUE
     SECTION PE32 = GalaxyA72/Binary/HALIOMMU/HALIOMMU.efi
     SECTION UI = "HALIOMMU"
   }
-  # from SDM845. Original causes hard reboot.
-  # (Unstable)
+  # Unstable
   FILE DRIVER = ABA01FF8-2CCB-4E12-8B2E-CD3F4A742993 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/CmdDbDxe/CmdDbDxe.depex
     SECTION PE32 = GalaxyA72/Binary/CmdDbDxe/CmdDbDxe.efi
     SECTION UI = "CmdDbDxe"
   }
-  # from SDM845. Original causes hard reboot.
+
   FILE DRIVER = CB29F4D1-7F37-4692-A416-93E82E219766 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/RpmhDxe/RpmhDxe.depex
     SECTION PE32 = GalaxyA72/Binary/RpmhDxe/RpmhDxe.efi
