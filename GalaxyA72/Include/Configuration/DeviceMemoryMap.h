@@ -3,7 +3,7 @@
 
 #include <Library/ArmLib.h>
 
-#define MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT 64
+#define MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT 73
 
 /* Below flag is used for system memory */
 #define SYSTEM_MEMORY_RESOURCE_ATTR_CAPABILITIES                               \
@@ -29,6 +29,7 @@ typedef struct {
 static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     /* Address,	  Length,     ResourceType, Resource Attribute, ARM MMU
        Attribute,                  HobOption, EFI Memory Type */
+       
     /*  HYP  */
     {0x80000000, 0x00600000, EFI_RESOURCE_MEMORY_RESERVED,
      EFI_RESOURCE_ATTRIBUTE_UNCACHEABLE, ARM_MEMORY_REGION_ATTRIBUTE_UNCACHED_UNBUFFERED,
@@ -121,6 +122,11 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {0xC2000000, 0x0A100000, EFI_RESOURCE_SYSTEM_MEMORY,
      SYSTEM_MEMORY_RESOURCE_ATTR_CAPABILITIES, ARM_MEMORY_REGION_ATTRIBUTE_WRITE_BACK,
      AddMem, EfiReservedMemoryType},
+
+    /*  HLOS  */
+    {0xC0000000, 0x140000000, EFI_RESOURCE_SYSTEM_MEMORY,
+     SYSTEM_MEMORY_RESOURCE_ATTR_CAPABILITIES, ARM_MEMORY_REGION_ATTRIBUTE_WRITE_BACK,
+     AddMem, EfiConventionalMemory},
 
     /* Other memory regions */
     /* AOP_SS_MSG_RAM */
@@ -257,7 +263,15 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {0x15000000, 0x000D0000, EFI_RESOURCE_MEMORY_MAPPED_IO,
      EFI_RESOURCE_ATTRIBUTE_UNCACHEABLE, ARM_MEMORY_REGION_ATTRIBUTE_NONSECURE_DEVICE,
      AddDev, EfiMemoryMappedIO},
-    /* Terminator */
-    {}};
+
+    /* Terminator for MMU*/
+    {0},
+
+    /* Terminator for LibMem */
+    { 0xFFFFFFFF, 0x00001000, EFI_RESOURCE_MEMORY_MAPPED_IO, 
+     EFI_RESOURCE_ATTRIBUTE_UNCACHEABLE, ARM_MEMORY_REGION_ATTRIBUTE_DEVICE, 
+     AddDev, EfiMemoryMappedIO}
+
+};
 
 #endif

@@ -24,6 +24,7 @@
   EmbeddedPkg/EmbeddedPkg.dec
   MdePkg/MdePkg.dec
   MdeModulePkg/MdeModulePkg.dec
+  GalaxyA72/GalaxyA72.dec
 
 [LibraryClasses]
   ArmLib
