@@ -183,11 +183,11 @@ READ_LOCK_STATUS   = TRUE
       SECTION PE32 = GalaxyA72/Binary/PdcDxe/PdcDxe.efi
       SECTION UI = "PdcDxe"
     }
-    #FILE DRIVER = 4DB5DEA6-5302-4D1A-8A82-677A683B0D29 {
-    #  SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
-    #  SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
-    #  SECTION UI = "ClockDxe"
-    #}
+    FILE DRIVER = 4DB5DEA6-5302-4D1A-8A82-677A683B0D29 {
+      SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
+      SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
+      SECTION UI = "ClockDxe"
+    }
 
     FILE DRIVER = 9C1EB71F-DD6C-4ED5-9F6A-5CC0CA789F16 {
       SECTION DXE_DEPEX = GalaxyA72/Binary/ShmBridgeDxe/ShmBridgeDxe.depex
@@ -233,11 +233,11 @@ READ_LOCK_STATUS   = TRUE
       SECTION UI = "SPMI"
     }
     INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
-    #FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
-    #  SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
-    #  SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
-    #  SECTION UI = "PmicDxe"
-    #}
+    FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
+      SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
+      SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
+      SECTION UI = "PmicDxe"
+    }
 
     INF MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf
 
@@ -443,6 +443,7 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "SmemDxe"
   }
 
+  # DALSys from SDM855. Original crashed edk2.
   FILE DRIVER = 8E9BD160-B184-11DF-94E2-0800200C9A66 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/DALSys/DALSys.depex
     SECTION PE32 = GalaxyA72/Binary/DALSys/DALSys.efi
@@ -485,6 +486,12 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "CmdDbDxe"
   }
 
+  FILE DRIVER = CB29F4D1-7F37-4692-A416-93E82E219711 {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/NpaDxe/NpaDxe.depex
+    SECTION PE32 = GalaxyA72/Binary/NpaDxe/NpaDxe.efi
+    SECTION UI = "NpaDxe"
+  }
+
   FILE DRIVER = CB29F4D1-7F37-4692-A416-93E82E219766 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/RpmhDxe/RpmhDxe.depex
     SECTION PE32 = GalaxyA72/Binary/RpmhDxe/RpmhDxe.efi
@@ -497,8 +504,6 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "PdcDxe"
   }
 
-  # SDM720G uses same clock as SDM855 according to Linux Kernel Sources
-  # ClockDxe from SDM720G and SDM855 causes phone to hard reboot (same as CmdDbDxe and RpmhDxe)
   #FILE DRIVER = 4db5dea6-5302-4d1a-8a82-677a683b0d29 {
   #  SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
   #  SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
@@ -547,11 +552,11 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "SPMI"
   }
 
-  #FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
-  #  SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
-  #  SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
-  #  SECTION UI = "PmicDxe"
-  #}
+  FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
+    SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
+    SECTION UI = "PmicDxe"
+  }
 
   FILE DRIVER = beb12bee-f6e1-11e1-9fb8-6c626de4aeb1 {
     SECTION PE32 = GalaxyA72/Binary/XhciPciEmulation/XhciPciEmulation.efi
