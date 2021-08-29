@@ -2,9 +2,6 @@ EDK2 for Samsung Galaxy A72.
 
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
-## Notice
-Starting from "Switch to LibMem and HLOS Memory to Memory Map" commit UEFI Shell crashes with "Recursive exception occurred while dumping the CPU state"
-
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
 

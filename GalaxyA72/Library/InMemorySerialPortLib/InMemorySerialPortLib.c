@@ -34,10 +34,10 @@ SerialPortInitialize (
   VOID
   )
 {
-  UINT8* base = (UINT8*)0xb4600000ull;
+  /*UINT8* base = (UINT8*)0xb4600000ull;
   for (UINTN i = 0; i < 0x100000; i++) {
     base[i] = 0;
-  }
+  }*/
   return RETURN_SUCCESS;
 }
 
