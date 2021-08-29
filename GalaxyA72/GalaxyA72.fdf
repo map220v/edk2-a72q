@@ -443,7 +443,6 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "SmemDxe"
   }
 
-  # DALSys from SDM855. Original crashed edk2.
   FILE DRIVER = 8E9BD160-B184-11DF-94E2-0800200C9A66 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/DALSys/DALSys.depex
     SECTION PE32 = GalaxyA72/Binary/DALSys/DALSys.efi
@@ -504,6 +503,7 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "PdcDxe"
   }
 
+  # When enabled makes DALSys crash... 
   #FILE DRIVER = 4db5dea6-5302-4d1a-8a82-677a683b0d29 {
   #  SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
   #  SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
@@ -552,11 +552,11 @@ READ_LOCK_STATUS   = TRUE
     SECTION UI = "SPMI"
   }
 
-  FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
-    SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
-    SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
-    SECTION UI = "PmicDxe"
-  }
+  #FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
+  #  SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
+  #  SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
+  #  SECTION UI = "PmicDxe"
+  #}
 
   FILE DRIVER = beb12bee-f6e1-11e1-9fb8-6c626de4aeb1 {
     SECTION PE32 = GalaxyA72/Binary/XhciPciEmulation/XhciPciEmulation.efi
