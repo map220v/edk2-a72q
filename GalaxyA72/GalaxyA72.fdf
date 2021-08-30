@@ -445,7 +445,7 @@ READ_LOCK_STATUS   = TRUE
 
   FILE DRIVER = 8E9BD160-B184-11DF-94E2-0800200C9A66 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/DALSys/DALSys.depex
-    SECTION PE32 = GalaxyA72/Binary/DALSys/DALSys.efi
+    SECTION PE32 = GalaxyA72/Binary/DALSys/855/DALSys.efi
     SECTION UI = "DALSys"
   }
 
@@ -502,8 +502,7 @@ READ_LOCK_STATUS   = TRUE
     SECTION PE32 = GalaxyA72/Binary/PdcDxe/PdcDxe.efi
     SECTION UI = "PdcDxe"
   }
-
-  # When enabled makes DALSys crash... 
+ 
   #FILE DRIVER = 4db5dea6-5302-4d1a-8a82-677a683b0d29 {
   #  SECTION DXE_DEPEX = GalaxyA72/Binary/ClockDxe/ClockDxe.depex
   #  SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
