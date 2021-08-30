@@ -2,6 +2,11 @@ EDK2 for Samsung Galaxy A72.
 
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
+## Status
+Boot Windows10 PE: error code 0xc0000017(There isn't enough memory available to create a ramdisk device)
+
+Boot MemTest86: Test 10 disabled (countdown not working) [MemTest86.log](https://gist.githubusercontent.com/map220v/eb1ec4104751e7bfccdc29073f1f16ee/raw/f4dfd7bd04741359e3689be3a743c4da39c6bb4f/MemTest86.log)
+
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
 
