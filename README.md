@@ -10,6 +10,9 @@ Boot MemTest86: Test 10 disabled (countdown not working) [MemTest86.log](https:/
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
 
+## Broken
+RAM (only 150MB~ memory free)
+
 ## WARNING
 
 **DO NOT EVER TRY TO PORT IT TO *SONY* and *GOOGLE* DEVICES**
