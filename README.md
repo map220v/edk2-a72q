@@ -20,7 +20,11 @@ RAM (only 150MB~ memory free)
 **YOUR UFS WILL BE WIPED CLEAN!!!**
 
 ## Building
-Tested on Ubuntu 20.04 (WSL2)
+Tested on:
+
+Ubuntu 20.04 (WSL2)
+
+Ubuntu 18.04 arm64 (android chroot)
 
 Setup
 ```
@@ -29,6 +33,7 @@ git clone https://github.com/tianocore/edk2.git --recursive
 git clone https://github.com/tianocore/edk2-platforms.git
 sudo apt install build-essential uuid-dev iasl git nasm python3-distutils gcc-aarch64-linux-gnu abootimg
 cd edk2-a72g
+mkdir workspace
 ./firstrun.sh
 ```
 Build
