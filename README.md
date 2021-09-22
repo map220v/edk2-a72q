@@ -29,10 +29,9 @@ Ubuntu 18.04 arm64 (android chroot)
 Setup
 ```
 git clone https://github.com/map220v/edk2-a72q
-git clone https://github.com/tianocore/edk2.git --recursive
-git clone https://github.com/tianocore/edk2-platforms.git
+git clone https://github.com/tianocore/edk2.git --recursive --depth 1
 sudo apt install build-essential uuid-dev iasl git nasm python3-distutils gcc-aarch64-linux-gnu abootimg
-cd edk2-a72g
+cd edk2-a72q
 mkdir workspace
 ./firstrun.sh
 ```
