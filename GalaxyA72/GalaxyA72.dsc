@@ -108,11 +108,21 @@
   #
   # ARM General Interrupt Controller
   #
-  gArmTokenSpaceGuid.PcdGicDistributorBase|0x17a00000
-  gArmTokenSpaceGuid.PcdGicRedistributorsBase|0x17a60000
+  gArmTokenSpaceGuid.PcdArmArchTimerFreqInHz|19200000
 
-  gArmTokenSpaceGuid.PcdArmArchTimerIntrNum|0x12
-  gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|0x13
+  gArmTokenSpaceGuid.PcdGicDistributorBase|0x17A00000
+  gArmTokenSpaceGuid.PcdGicRedistributorsBase|0x17A60000
+
+  # Below PcdGicInterruptInterfaceBase is used for supporting the GICv2 Emulation in the Hyper visor
+  # Which need mGicInterruptInterfaceBase to be initialized to 0x17A60000
+  gArmTokenSpaceGuid.PcdGicInterruptInterfaceBase|0x17A60000
+
+  # Timers
+  # ARM Architectural Timer Interrupt(GIC PPI) numbers
+  gArmTokenSpaceGuid.PcdArmArchTimerSecIntrNum|17
+  gArmTokenSpaceGuid.PcdArmArchTimerIntrNum|18
+  gArmTokenSpaceGuid.PcdArmArchTimerHypIntrNum|0
+  gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|19
 
   # GUID of the UI app
   gEfiMdeModulePkgTokenSpaceGuid.PcdBootManagerMenuFile|{ 0x21, 0xaa, 0x2c, 0x46, 0x14, 0x76, 0x03, 0x45, 0x83, 0x6e, 0x8a, 0xb6, 0xf4, 0x66, 0x23, 0x31 }
@@ -120,8 +130,6 @@
   gEfiMdePkgTokenSpaceGuid.PcdPlatformBootTimeOut|5
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdResetOnMemoryTypeInformationChange|FALSE
-
-  gEmbeddedTokenSpaceGuid.PcdMetronomeTickPeriod|1000
 
   #
   #
