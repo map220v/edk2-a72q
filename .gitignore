@@ -1,4 +1,8 @@
-uefi.img
-boot-a72q.img
-ramdisk
+#Build Script
+/uefi.img
+/boot-a72q.img
+/ramdisk
+/workspace
+
+#VSCode
 .vscode
