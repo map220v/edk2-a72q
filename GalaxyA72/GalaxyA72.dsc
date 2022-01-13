@@ -146,8 +146,6 @@
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferAddress|0x9c000000
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferWidth|1080
   gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferHeight|2400
-  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|1080
-  gGalaxyA72TokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|2400
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiExposedTableVersions|0x20
 
