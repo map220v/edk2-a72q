@@ -3,7 +3,7 @@ EDK2 for Samsung Galaxy A72.
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
 ## Status
-Boot Windows10 PE: Reboots after ExitBootServices called by winload.efi
+Boot Windows10 PE: Freezes after ExitBootServices called by winload.efi
 
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
