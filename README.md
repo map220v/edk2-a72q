@@ -5,6 +5,8 @@ Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixe
 ## Status
 Boot Windows10 PE: boot.wim loads fine. winload.efi gives error 0xc000000d(Fatal error transitioning to the operating system.)
 
+2022-2-8 Source of 0xc000000d error is function EfiGetNtStatusCode in winload.efi. This error means efi error code 0x8000000000000002(EFI_INVALID_PARAMETER)
+
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
 
