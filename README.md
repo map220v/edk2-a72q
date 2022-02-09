@@ -3,7 +3,8 @@ EDK2 for Samsung Galaxy A72.
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
 ## Status
-Boot Windows10 PE: Freezes after ExitBootServices called by winload.efi
+Boot Windows10 PE: shows spinning wheel and then BSOD!
+BSOD ERROR CODE: IRQL_NOT_LESS_OR_EQUAL
 
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
