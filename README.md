@@ -3,7 +3,9 @@ EDK2 for Samsung Galaxy A72.
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
 ## Status
-Boot Windows PE: Boots clean boot.wim(not 20h2pe_new that has sdm845 drivers)
+Boot Windows PE: Boots with clean boot.wim(not 20h2pe_new that has sdm845 drivers)
+
+[win11setup_NODRIVERS.zip](https://drive.google.com/drive/folders/1-k4LwTuVw48e3Es_CIKPNf68CA9HXYRb?usp=sharing)
 
 Requires drivers from Snapdragon 7C(sc7180) to make usb, etc to work.
 
