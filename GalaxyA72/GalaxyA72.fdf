@@ -252,7 +252,19 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
   INF MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
   INF MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
-  INF RuleOverride = ACPITABLE GalaxyA72/AcpiTables/AcpiTables.inf
+  #INF RuleOverride = ACPITABLE GalaxyA72/AcpiTables/AcpiTables.inf
+
+  //SC7180 ACPI Tables
+  FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {   
+    SECTION RAW = GalaxyA72/AcpiTables/test/DBG2.aml
+    SECTION RAW = GalaxyA72/AcpiTables/test/DSDT.aml
+    SECTION RAW = GalaxyA72/AcpiTables/test/MADT.aml
+    SECTION RAW = GalaxyA72/AcpiTables/test/FACP.aml
+    SECTION RAW = GalaxyA72/AcpiTables/test/GTDT.aml
+    SECTION RAW = GalaxyA72/AcpiTables/test/IORT.aml
+    SECTION RAW = GalaxyA72/AcpiTables/test/PPTT.aml
+    SECTION UI = "AcpiTables"
+  }
 
   #
   # SMBIOS Support

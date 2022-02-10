@@ -3,8 +3,9 @@ EDK2 for Samsung Galaxy A72.
 Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixel3
 
 ## Status
-Boot Windows10 PE: shows spinning wheel and then BSOD!
-BSOD ERROR CODE: IRQL_NOT_LESS_OR_EQUAL
+Boot Windows PE: Boots clean boot.wim(not 20h2pe_new that has sdm845 drivers)
+
+Requires drivers from Snapdragon 7C(sc7180) to make usb, etc to work.
 
 ## Working
 UFS Storage (using UFSDxe from edk2-sdm845-binary)
