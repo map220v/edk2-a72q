@@ -37,6 +37,10 @@ Build
 ```
 ./build.sh
 ```
+Or this for 8Gb RAM model
+```
+./build_8G.sh
+```
 Flash
 ```
 heimdall flash --BOOT boot-a72q.img

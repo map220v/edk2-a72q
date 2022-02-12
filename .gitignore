@@ -1,6 +1,6 @@
 #Build Script
 /uefi.img
-/boot-a72q.img
+/boot-a72q*.img
 /ramdisk
 /workspace
 

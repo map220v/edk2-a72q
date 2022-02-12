@@ -30,9 +30,15 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     /* Address,	  Length,     ResourceType, Resource Attribute, ARM MMU
        Attribute,                  HobOption, EFI Memory Type */
        
+    #ifdef MEMORY_8G
+    {0xC0000000, 0x1C0000000, EFI_RESOURCE_SYSTEM_MEMORY,
+     SYSTEM_MEMORY_RESOURCE_ATTR_CAPABILITIES, ARM_MEMORY_REGION_ATTRIBUTE_WRITE_BACK,
+     AddMem, EfiConventionalMemory},
+    #else
     {0xC0000000, 0x140000000, EFI_RESOURCE_SYSTEM_MEMORY,
      SYSTEM_MEMORY_RESOURCE_ATTR_CAPABILITIES, ARM_MEMORY_REGION_ATTRIBUTE_WRITE_BACK,
      AddMem, EfiConventionalMemory},
+    #endif
 
     /*  HYP  */
     {0x80000000, 0x00600000, EFI_RESOURCE_MEMORY_RESERVED,
