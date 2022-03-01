@@ -5,7 +5,7 @@ Based on zhuowei's commits for Pixel3XL - https://github.com/Pixel3Dev/edk2-pixe
 ## Status
 Boot Windows PE: Boots with clean boot.wim(not 20h2pe_new that has sdm845 drivers)
 
-[win11setup_NODRIVERS.zip](https://drive.google.com/drive/folders/1-k4LwTuVw48e3Es_CIKPNf68CA9HXYRb?usp=sharing)
+[winpe_desktop_NODRIVERS.zip](https://drive.google.com/drive/folders/1-k4LwTuVw48e3Es_CIKPNf68CA9HXYRb?usp=sharing)
 
 Requires drivers from Snapdragon 7C(sc7180) to make usb, etc to work.
 
