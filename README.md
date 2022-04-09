@@ -10,7 +10,7 @@ Boot Windows PE: Boots with clean boot.wim(not 20h2pe_new that has sdm845 driver
 Requires drivers from Snapdragon 7C(sc7180) to make usb, etc to work.
 
 ## Working
-UFS Storage (using UFSDxe from edk2-sdm845-binary)
+UFS Storage (not working in Windows, because of ufs protection that triggered by Windows driver)
 
 ## WARNING
 
