@@ -50,6 +50,8 @@
   PlatformBootManagerLib|GalaxyA72/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
   MemoryInitPeiLib|GalaxyA72/Library/MemoryInitPeiLib/PeiMemoryAllocationLib.inf
   PlatformPeiLib|GalaxyA72/Library/PlatformPeiLib/PlatformPeiLib.inf
+  
+  VariableFlashInfoLib|MdeModulePkg/Library/BaseVariableFlashInfoLib/BaseVariableFlashInfoLib.inf
 
 [LibraryClasses.common.SEC]
   PrePiLib|EmbeddedPkg/Library/PrePiLib/PrePiLib.inf
