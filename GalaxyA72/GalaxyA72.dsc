@@ -52,6 +52,9 @@
   PlatformPeiLib|GalaxyA72/Library/PlatformPeiLib/PlatformPeiLib.inf
   
   VariableFlashInfoLib|MdeModulePkg/Library/BaseVariableFlashInfoLib/BaseVariableFlashInfoLib.inf
+  
+  AslUpdateLib|GalaxyA72/Library/DxeAslUpdateLib/DxeAslUpdateLib.inf
+  AcpiPlatformUpdateLib|GalaxyA72/Library/AcpiPlatformUpdateLib/AcpiPlatformUpdateLib.inf
 
 [LibraryClasses.common.SEC]
   PrePiLib|EmbeddedPkg/Library/PrePiLib/PrePiLib.inf

@@ -59,6 +59,7 @@
   UefiBootManagerLib
   UefiBootServicesTableLib
   UefiLib
+  AcpiPlatformUpdateLib
 
 [FeaturePcd]
   gEfiMdePkgTokenSpaceGuid.PcdUgaConsumeSupport

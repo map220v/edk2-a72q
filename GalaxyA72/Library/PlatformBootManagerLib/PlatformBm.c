@@ -17,6 +17,7 @@
 
 **/
 
+#include <Library/AcpiPlatformUpdateLib.h>
 #include <Library/BootLogoLib.h>
 #include <Library/CapsuleLib.h>
 #include <Library/DevicePathLib.h>
@@ -567,6 +568,8 @@ PlatformBootManagerAfterConsole (
 {
   ESRT_MANAGEMENT_PROTOCOL      *EsrtManagement;
   EFI_STATUS                    Status;
+  
+  PlatformUpdateAcpiTables();
 
   //
   // Show the splash screen.
