@@ -157,6 +157,12 @@ READ_LOCK_STATUS   = TRUE
       SECTION PE32 = GalaxyA72/Binary/HALIOMMU/HALIOMMU.efi
       SECTION UI = "HALIOMMU"
     }
+    
+    FILE DRIVER = 9C1EB71F-DD6C-4ED5-9F6A-5CC0CA789F16 {
+      SECTION DXE_DEPEX = GalaxyA72/Binary/ShmBridgeDxe/ShmBridgeDxe.depex
+      SECTION PE32 = GalaxyA72/Binary/ShmBridgeDxe/ShmBridgeDxe.efi
+      SECTION UI = "ShmBridgeDxe"
+    }
 
     FILE DRIVER = E43128A8-8692-42B6-8AFA-676158578D18 {
       SECTION DXE_DEPEX = GalaxyA72/Binary/ULogDxe/ULogDxe.depex
@@ -188,12 +194,36 @@ READ_LOCK_STATUS   = TRUE
       SECTION PE32 = GalaxyA72/Binary/ClockDxe/ClockDxe.efi
       SECTION UI = "ClockDxe"
     }
-
-    FILE DRIVER = 9C1EB71F-DD6C-4ED5-9F6A-5CC0CA789F16 {
-      SECTION DXE_DEPEX = GalaxyA72/Binary/ShmBridgeDxe/ShmBridgeDxe.depex
-      SECTION PE32 = GalaxyA72/Binary/ShmBridgeDxe/ShmBridgeDxe.efi
-      SECTION UI = "ShmBridgeDxe"
+    
+    FILE DRIVER = 8681CC5A-0DF6-441E-B4B8-E915C538F067 {
+      SECTION DXE_DEPEX = GalaxyA72/Binary/DALTLMM/DALTLMM.depex
+      SECTION PE32 = GalaxyA72/Binary/DALTLMM/DALTLMM.efi
+      SECTION UI = "DALTLMM"
     }
+
+    FILE DRIVER = 2A7B4BEF-80CD-49E1-B473-374BA4D673FC {
+      SECTION DXE_DEPEX = GalaxyA72/Binary/SPMI/SPMI.depex
+      SECTION PE32 = GalaxyA72/Binary/SPMI/SPMI.efi
+      SECTION UI = "SPMI"
+    }
+    
+    FILE DRIVER = 7DB0793A-4402-4BE1-906E-D0FABAD2707E {
+      SECTION DXE_DEPEX = GalaxyA72/Binary/DDRInfoDxe/DDRInfoDxe.depex
+      SECTION PE32 = GalaxyA72/Binary/DDRInfoDxe/DDRInfoDxe.efi
+      SECTION UI = "DDRInfoDxe"
+    }
+    
+    #FILE DRIVER = 3AE17DB7-3CC5-4B89-9304-9549211057EF {
+    #  SECTION DXE_DEPEX = GalaxyA72/Binary/ResetRuntimeDxe/ResetRuntimeDxe.depex
+    #  SECTION PE32 = GalaxyA72/Binary/ResetRuntimeDxe/ResetRuntimeDxe.efi
+    #  SECTION UI = "ResetRuntimeDxe"
+    #}
+    
+    #FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
+    #  SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
+    #  SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
+    #  SECTION UI = "PmicDxe"
+    #}
 
     INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
     INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
@@ -437,6 +467,36 @@ READ_LOCK_STATUS   = TRUE
     SECTION PE32 = GalaxyA72/Binary/ShmBridgeDxe/ShmBridgeDxe.efi
     SECTION UI = "ShmBridgeDxe"
   }
+  
+  FILE DRIVER = 8681CC5A-0DF6-441E-B4B8-E915C538F067 {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/DALTLMM/DALTLMM.depex
+    SECTION PE32 = GalaxyA72/Binary/DALTLMM/DALTLMM.efi
+    SECTION UI = "DALTLMM"
+  }
+  
+  FILE DRIVER = 2A7B4BEF-80CD-49E1-B473-374BA4D673FC {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/SPMI/SPMI.depex
+    SECTION PE32 = GalaxyA72/Binary/SPMI/SPMI.efi
+    SECTION UI = "SPMI"
+  }
+  
+  FILE DRIVER = 7DB0793A-4402-4BE1-906E-D0FABAD2707E {
+    SECTION DXE_DEPEX = GalaxyA72/Binary/DDRInfoDxe/DDRInfoDxe.depex
+    SECTION PE32 = GalaxyA72/Binary/DDRInfoDxe/DDRInfoDxe.efi
+    SECTION UI = "DDRInfoDxe"
+  }
+  
+  #FILE DRIVER = 3AE17DB7-3CC5-4B89-9304-9549211057EF {
+  #  SECTION DXE_DEPEX = GalaxyA72/Binary/ResetRuntimeDxe/ResetRuntimeDxe.depex
+  #  SECTION PE32 = GalaxyA72/Binary/ResetRuntimeDxe/ResetRuntimeDxe.efi
+  #  SECTION UI = "ResetRuntimeDxe"
+  #}
+  
+  #FILE DRIVER = 5776232E-082D-4B75-9A0E-FE1D13F7A5D9 {
+  #  SECTION DXE_DEPEX = GalaxyA72/Binary/PmicDxe/PmicDxe.depex
+  #  SECTION PE32 = GalaxyA72/Binary/PmicDxe/PmicDxe.efi
+  #  SECTION UI = "PmicDxe"
+  #}
   
   FILE DRIVER = 0d35cd8e-97ea-4f9a-96af-0f0d89f76567 {
     SECTION DXE_DEPEX = GalaxyA72/Binary/UFSDxe/UFSDxe.depex
